@@ -1,13 +1,22 @@
 import Vue from 'vue'
 import VueRouter, { createRouter, createWebHashHistory } from 'vue-router'
-import Home from '../views/Home.vue'
+import Home from '../views/home/index.vue'
+import Login from '../views/login/index.vue'
 Vue.use(VueRouter)
-
 const routes = [
   {
     path: '/',
+    redirect: '/home'
+  },
+  {
+    // 主页
+    path: '/home',
     name: 'Home',
     component: Home
+  }, {
+    // 登录页
+    path: '/login',
+    component: Login
   }
   // {
   // path: '/about',
